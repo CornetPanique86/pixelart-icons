@@ -1,0 +1,14 @@
+i[class^="pxico-"] {
+    image-rendering: crisp-edges;
+    shape-rendering: crispEdges;
+}
+
+i.pxico-arrow {
+    background-image: url("data:image/svg+xml,%3Csvg id='html5' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='50' height='50' viewBox='0 0 50 50' enable-background='new 0 0 50 50' xml:space='preserve'%3E%3Ctitle%3EHTML5 Logo%3C/title%3E%3Cpath id='shield' fill='%23E34F26' d='M6.5,44.9L2.5,0h44l-4,44.9L24.5,50'/%3E%3Cpath id='shield-light' fill='%23EF652A' d='M24.5,46.1l14.6-4l3.4-38.5h-18'/%3E%3Cpath id='five-shadow' fill='%23EBEBEB' d='M24.5,20.3h-7.3l-0.5-5.7h7.8V9.2h-0.1H10.7l0.1,1.5l1.4,15.2h12.4V20.3z M24.5,34.7 L24.5,34.7L18.3,33l-0.4-4.4H15h-2.5l0.7,8.7l11.3,3.1h0.1V34.7z'/%3E%3Cpath id='five' fill='%23FFFFFF' d='M24.5,20.3v5.6h6.8L30.6,33l-6.2,1.7v5.8l11.3-3.1l0.1-1l1.3-14.6l0.2-1.5h-1.6H24.5z M24.5,9.2 v3.4v2.1l0,0h13.4l0,0l0,0l0.1-1.2l0.3-2.8l0.1-1.5H24.5z'/%3E%3C/svg%3E");
+}
+i.pxico-discord {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -0.5 16 16'%3E%3Cpath d='M1 0h14M0 1h16M0 2h16M0 3h5m2 0h2m2 0h5M0 4h4m8 0h4M0 5h3m10 0h3M0 6h3m10 0h3M0 7h2m3 0h2m2 0h2m3 0h2M0 8h2m3 0h2m2 0h2m3 0h2M0 9h2m12 0h2M0 10h2m3 0h1m4 0h1m3 0h2M0 11h3m3 0h4m3 0h3M0 12h4m3 0h2m3 0h4M0 13h12m1 0h3M1 14h11m2 0h2m-1 1h1'/%3E%3C/svg%3E");
+}
+i.pxico-youtube {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0h4v7H1zm4 0h6v1H5zm0 6h6v1H5zM0 1h1v5H0zm8 0h4v5H8zM7 1h1v2H7zM6 1h1v1H6zm1 3h1v2H7zM6 5h1v1H6z'/%3E%3C/svg%3E");
+}
