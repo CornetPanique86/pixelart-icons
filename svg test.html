@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SVG Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = () => {
+            let colorChangeBtn = document.querySelector("#colorChange");
+            let colorChangeA = 0;
+            const colorList = ["black", "red", "blue"];
+            colorChangeBtn.addEventListener("click", () => {
+                colorChangeA = (colorChangeA < 2) ? (colorChangeA + 1) : 0;
+                console.log(colorChangeA);
+                colorChangeBtn.setAttribute("color", colorList[colorChangeA]);
+            })
+        }
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/pixelarticons.css'>
+    <style>
+        body {
+            display: flex;
+        }
+        i {
+            min-width: 50px;
+            min-height: 50px;
+            display: block;
+        }
+        #colorChange {
+            color: tomato;
+        }
+        #colorChange[color="black"] ~ i { fill: black; }
+        #colorChange[color="red"] ~ i { fill: red; }
+        #colorChange[color="blue"] ~ i { fill: blue; }
+    </style>
+</head>
+<body>
+    <button type="button" id="colorChange">Color</button>
+
+    <i class="pxico-arrow"></i>
+    <i class="pxico-discord"></i>
+    <i class="pxico-youtube"></i>
+    <i class="pxico-twitter"></i>
+    <i class="pxico-reddit"></i>
+    <i class="pxico-github"></i>
+    <i class="pxico-download"></i>
+</body>
+</html>
