@@ -28,7 +28,7 @@ Host it on your website by downloading the [latest js file](https://github.com/C
 or use a CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/dist/pixelarticons.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/dist/pixelarticons.js"></script>
 ```
 
 To apply styling:
@@ -36,6 +36,8 @@ To apply styling:
 ```html
 <i class="pxico-iconname" style="color: red; /* etc... */"></i>
 ```
+
+&nbsp;
 
 ### 2. using the js file which uses external SVG files:
 
@@ -46,7 +48,7 @@ Host it on your website by downloading the [latest js file](https://github.com/C
 or use a CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/dist/pixelarticons_ext.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/dist/pixelarticons_ext.js"></script>
 ```
 
 **Configuration:**
@@ -57,6 +59,8 @@ Change `fileExtension` to false to remove the ".svg" at the end of the URL.
 
 To add classes to the `<img>` elements write them in `classList`
 
+&nbsp;
+
 ### 3. using the single css file:
 
 Every icon is stored in the .CSS in background-image url's encoded in data URI.
@@ -66,8 +70,10 @@ Host it on your website by downloading the [latest css file](https://github.com/
 or use a CDN:
 
 ```html
-<link rel='stylesheet' type='text/css' crossorigin="anonymous" href='https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/dist/pixelarticons.min.css'>
+<link rel='stylesheet' type='text/css' crossorigin="anonymous" href='https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/dist/pixelarticons.css'>
 ```
+
+&nbsp;
 
 ### For methods 1, 2, 3:
 
@@ -76,6 +82,16 @@ Use an icon by putting a `<i>` tag in your HTML, for example:
 ```html
 <i class="pxico-iconname"></i>
 ```
+
+Some icons have a colored version, meaning their color cannot be changed by CSS but they have more than 1 color. To use the colored version of the icon, place the "color" suffix after the icon name:
+
+```html
+<i class="pxico-iconnamecolor"></i>
+```
+
+&nbsp;
+
+&nbsp;
 
 ### 4. importing every icon statically:
 
@@ -86,6 +102,12 @@ Get the file icon from jsdelivr or host the icons on your website.
 ```
 
 Or insert plain SVG code into your HTML.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 ## Credits
 
@@ -104,12 +126,12 @@ SVG to data URI function in build.js is extracted from the repository:
 - [x] Twitter
 - [x] Reddit
 - [x] Github
+- [x] Download
+- [x] Clipboard
 
 **To Do**
 
-- [ ] Download
 - [ ] External Link
-- [ ] Clipboard
 - [ ] Picture
 - [ ] Cross
 - [ ] Search

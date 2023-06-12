@@ -8,6 +8,6 @@
     "uglify-js": "^3.17.4"
   },
   "scripts": {
-    "build": "./build.js"
+    "build": "node ./build.js"
   }
 }
