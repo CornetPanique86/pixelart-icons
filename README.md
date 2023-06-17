@@ -128,10 +128,10 @@ SVG to data URI function in build.js is extracted from the repository:
 - [x] Github
 - [x] Download
 - [x] Clipboard
+- [x] External Link
 
 **To Do**
 
-- [ ] External Link
 - [ ] Picture
 - [ ] Cross
 - [ ] Search
