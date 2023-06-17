@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create an <svg> element
         const fragment = document.createRange().createContextualFragment(iconMap.get(iconName));
         const svg = fragment.querySelector('svg');
-        svg.setAttribute("style", icon.attributes.getNamedItem("style"));
+        if (icon.getAttribute("style")) svg.setAttribute("style", icon.getAttribute("style"));
+        svg.setAttribute("class", icon.getAttribute("class"));
 
         // Replace the <i> element with the generated <svg> element
         icon.parentNode.replaceChild(svg, icon);

@@ -17,26 +17,26 @@
             })
         }
     </script>
-    <link rel='stylesheet' type='text/css' media='screen' href='./src/pixelarticons.css'>
-    
-    <!--Added Css Code in html file-->
+    <script src="dist/pixelarticons.js"></script>
     <style>
         body {
             display: flex;
+            flex-wrap: wrap;
         }
-        i {
-            min-width: 50px;
-            min-height: 50px;
-            display: block;
+        svg[class^="pxico-"] {
+            image-rendering: pixelated;
+            shape-rendering: crispEdges;
+            max-width: 20%;
+            height: auto;
         }
         #colorChange {
             color: tomato;
         }
-        #colorChange[color="black"] ~ i { fill: black; }
-        #colorChange[color="red"] ~ i { fill: red; }
-        #colorChange[color="blue"] ~ i { fill: blue; }
+        #colorChange[color="black"] ~ svg { color: black; }
+        #colorChange[color="red"] ~ svg { color: red; }
+        #colorChange[color="blue"] ~ svg { color: blue; }
     </style>
-    <!--End-->
+    <link rel='stylesheet' type='text/css' href='dist/pixelarticons_anim.css'>
 
 </head>
 <body>
@@ -48,6 +48,19 @@
     <i class="pxico-twitter"></i>
     <i class="pxico-reddit"></i>
     <i class="pxico-github"></i>
-    <i class="pxico-download"></i>
+    <i class="pxico-clipboard"></i>
+    <i class="pxico-picture"></i>
+    <i class="pxico-picturecolor"></i>
+    <i class="pxico-cross"></i>
+    <i class="pxico-search"></i>
+    <i class="pxico-info"></i>
+    <i class="pxico-question"></i>
+    <i class="pxico-exclamation"></i>
+    <i class="pxico-warning"></i>
+    <i class="pxico-link"></i>
+    <i class="pxico-burger"></i>
+    <i class="pxico-caret"></i>
+    <i class="pxico-download_anim"></i>
+    <i class="pxico-external_link_anim"></i>
 </body>
 </html>

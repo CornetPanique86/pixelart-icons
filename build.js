@@ -3,7 +3,8 @@ const path = require('path');
 const CleanCSS = require('clean-css');
 const UglifyJS = require("uglify-js");
 
-const svgFolderPath = "./res/svg/optimized"
+const svgFolderPath = "./res/svg/optimized";
+const cssAnimPath = "./src/pixelarticons_anim.css";
 
 const isFile = fileName => {
     return fs.lstatSync(fileName).isFile();
@@ -12,6 +13,12 @@ const isFile = fileName => {
 const svgFileList = fs.readdirSync(svgFolderPath)
                         .map(fileName => {
                           return path.join(svgFolderPath, fileName);
+                        })
+                        .filter(isFile);
+
+const svgAnimFileList = fs.readdirSync("./res/svg/optimized/anim")
+                        .map(fileName => {
+                          return path.join("./res/svg/optimized/anim", fileName);
                         })
                         .filter(isFile);
 
@@ -27,18 +34,22 @@ function fileContentList(fileList) {
 }
 
 const svgList = fileContentList(svgFileList);
+const svgAnimList = fileContentList(svgAnimFileList);
 
 // Method 1: store all SVG contents in a map
-function jsM1Build(svgList) {
+function jsM1Build(svgList, svgAnimList) {
     let output = `const iconMap = new Map();`;
     for (let i = 0; i < svgList.length; i++) {
         output += ` iconMap.set("${svgList[i].name}", \`${svgList[i].content}\`);`;
+    }
+    for (let i = 0; i < svgAnimList.length; i++) {
+        output += ` iconMap.set("${svgAnimList[i].name}_anim", \`${svgAnimList[i].content}\`);`;
     }
     const minifyInput = output + fs.readFileSync("./src/pixelarticons.js", 'utf8');
     return UglifyJS.minify(minifyInput).code;
 }
 try {
-    fs.writeFileSync('./dist/pixelarticons.js', jsM1Build(svgList));
+    fs.writeFileSync('./dist/pixelarticons.js', jsM1Build(svgList, svgAnimList));
     console.log("JS method 1 written");
 } catch (err) {
     console.error("!!! Error at JS method 1 write !!!   " + err);
@@ -56,19 +67,33 @@ try {
 }
 
 // Method 3: CSS file with background image URL's containing the SVG's encoded data URI
-function cssM3Build(svgList) {
+function cssM3Build(svgList, svgAnimList) {
     let output = fs.readFileSync("./src/pixelarticons.css", 'utf8');
     for (let i = 0; i < svgList.length; i++) {
         output += `i.pxico-${svgList[i].name} { background-image: url("${svgToDataURI(svgList[i].content)}"); }`;
+    }
+    for (let i = 0; i < svgAnimList.length; i++) {
+        output += `i.pxico-${svgAnimList[i].name}_anim { background-image: url("${svgToDataURI(svgAnimList[i].content)}"); }`;
     }
     const minifiedOutput = new CleanCSS().minify(output).styles;
     return minifiedOutput;
 }
 try {
-    fs.writeFileSync('./dist/pixelarticons.css', cssM3Build(svgList));
+    fs.writeFileSync('./dist/pixelarticons.css', cssM3Build(svgList, svgAnimList));
     console.log("CSS method 3 written");
 } catch (err) {
     console.error("!!! Error at CSS method 3 write !!!   " + err);
+}
+
+function cssAnimBuild(cssAnimPath) {
+    const minifiedOutput = new CleanCSS().minify(fs.readFileSync(path.resolve(cssAnimPath), 'utf8')).styles;
+    return minifiedOutput;
+}
+try {
+    fs.writeFileSync('./dist/pixelarticons_anim.css', cssAnimBuild(cssAnimPath));
+    console.log("CSS animations written");
+} catch (err) {
+    console.error("!!! Error at CSS animations write !!!   " + err);
 }
 
 

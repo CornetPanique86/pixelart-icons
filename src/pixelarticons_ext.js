@@ -12,14 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     icons.forEach(icon => {
         // Extract the icon name from the class
         const iconName = icon.className.replace(/.*pxico-(\w+).*/, "$1");
-        
+
         // Create an <img> element
         const img = document.createElement("img");
-        img.src = fileExtension ? baseURL + "/" + iconName + ".svg" : baseURL + "/" + iconName;
+        // If icon is animated or not
+        if (iconName.test(/\w+_anim\b/)) {
+            const iconNameAnim = iconName.replace(/\b(\w+)_anim/, "$1");
+            img.src = fileExtension ? baseURL + "/anim/" + iconNameAnim + ".svg" : baseURL + "/anim/" + iconNameAnim;
+        } else {
+            img.src = fileExtension ? baseURL + "/" + iconName + ".svg" : baseURL + "/" + iconName;
+        }
         img.alt = iconName;
         if (/\S/.test(classList)) img.class = classList;
 
-        // Replace the <i> element with the generated <svg> element
+        // Replace the <i> element with the generated <img> element
         icon.parentNode.replaceChild(img, icon);
     });
 });

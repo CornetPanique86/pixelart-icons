@@ -12,7 +12,7 @@ In .SVG format so that you can manipulate the icons via CSS.
 There are several methods of implementing the icon library:
 
 
-| Method | Styling | HTTP requests                   | Caching | File size                   |
+| Method | Styling / Animations | HTTP requests                   | Caching | File size                   |
 |--------|---------|---------------------------------|---------|-----------------------------|
 | 1      | ✅       | 1                               | 🤷‍♂️ idk  | ++                          |
 | 2      | ❌       | Amount of times you use icons           | ✅       | +                           |
@@ -35,6 +35,12 @@ To apply styling:
 
 ```html
 <i class="pxico-iconname" style="color: red; /* etc... */"></i>
+```
+
+Use an animated version *(note: it means the SVG has special classes and its paths are split up. You have to add the animations yourself via CSS or get the default animations file in dist/pixelarticons_anim.css)*:
+
+```html
+<i class="pxico-iconname_anim"></i>
 ```
 
 &nbsp;
@@ -98,7 +104,7 @@ Some icons have a colored version, meaning their color cannot be changed by CSS 
 Get the file icon from jsdelivr or host the icons on your website.
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/res/svg/optimized/filename.svg>
+<img src="https://cdn.jsdelivr.net/gh/CornetPanique86/pixelart-icons/res/svg/optimized/filename.svg">
 ```
 
 Or insert plain SVG code into your HTML.
@@ -111,11 +117,13 @@ Or insert plain SVG code into your HTML.
 
 ## Credits
 
-[Pixels to SVG](https://codepen.io/shshaw/pen/XbxvNj) to convert .PNG pixel arts to .SVG properly.
+- [Pixels to SVG](https://codepen.io/shshaw/pen/XbxvNj) to convert .PNG pixel arts to .SVG properly.
 
-⭐ endereyes202#5828 ([YouTube](https://www.youtube.com/@endereyes202), [Twitch](https://www.twitch.tv/endereyes202), [Twitter](https://twitter.com/endereyes202)): made the twitter and reddit logos.
+- SVGO and [SVGOMG](https://svgomg.net/) to optimize .SVG's.
 
-SVG to data URI function in build.js is extracted from the repository:
+- ⭐ endereyes202#5828 ([YouTube](https://www.youtube.com/@endereyes202), [Twitch](https://www.twitch.tv/endereyes202), [Twitter](https://twitter.com/endereyes202)): made the twitter and reddit logos, clipboard, picture colored version.
+
+- SVG to data URI function in build.js is extracted from the repository:
 [svg-to-data-uri](https://github.com/heyallan/svg-to-data-uri) by heyallan under the [MIT License](https://github.com/heyallan/svg-to-data-uri/blob/master/LICENSE).
 
 ### List of icons
@@ -127,18 +135,18 @@ SVG to data URI function in build.js is extracted from the repository:
 - [x] Reddit
 - [x] Github
 - [x] Download
+  - [x] Download anim
 - [x] Clipboard
-
-**To Do**
-
-- [ ] External Link
-- [ ] Picture
-- [ ] Cross
-- [ ] Search
-- [ ] Info
-- [ ] Question
-- [ ] Exclamation
-- [ ] Warning
-- [ ] Link
-- [ ] Burger
-- [ ] Caret
+- [x] External Link
+  - [x] External Link anim
+- [x] Picture
+  - [x] Picture color
+- [x] Cross
+- [x] Search
+- [x] Info
+- [x] Question
+- [x] Exclamation
+- [x] Warning
+- [x] Link
+- [x] Burger
+- [x] Caret
