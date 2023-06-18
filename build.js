@@ -38,13 +38,14 @@ const svgAnimList = fileContentList(svgAnimFileList);
 
 // Method 1: store all SVG contents in a map
 function jsM1Build(svgList, svgAnimList) {
-    let output = `const iconMap = new Map();`;
+    let output = `const pxicoIconMap = new Map([`;
     for (let i = 0; i < svgList.length; i++) {
-        output += ` iconMap.set("${svgList[i].name}", \`${svgList[i].content}\`);`;
+        output += `["${svgList[i].name}", \`${svgList[i].content}\`],`;
     }
     for (let i = 0; i < svgAnimList.length; i++) {
-        output += ` iconMap.set("${svgAnimList[i].name}_anim", \`${svgAnimList[i].content}\`);`;
+        output += `["${svgAnimList[i].name}_anim", \`${svgAnimList[i].content}\`],`;
     }
+    output += "]);";
     const minifyInput = output + fs.readFileSync("./src/pixelarticons.js", 'utf8');
     return UglifyJS.minify(minifyInput).code;
 }
