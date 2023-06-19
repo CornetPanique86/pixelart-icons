@@ -1,4 +1,5 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', pxicoReplaceToSVG());
+function pxicoReplaceToSVG() {
     // Get all <i> elements with class "pxico-icon"
     const icons = document.querySelectorAll("i[class^='pxico-']");
 
@@ -16,4 +17,4 @@ window.addEventListener('load', function() {
         // Replace the <i> element with the generated <svg> element
         icon.parentNode.replaceChild(svg, icon);
     });
-});  
+}

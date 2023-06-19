@@ -1,6 +1,6 @@
-# [Work In Progress]
-
+![pixelart-icons banner](banner.jpg)
 # Pixel art icons
+
 My pixel art icons which you can use yourself by importing a single CSS file or a JS file!
 
 In .SVG format so that you can manipulate the icons via CSS.
