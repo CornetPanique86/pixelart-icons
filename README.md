@@ -123,6 +123,8 @@ Or insert plain SVG code into your HTML.
 
 - ⭐ endereyes202#5828 ([YouTube](https://www.youtube.com/@endereyes202), [Twitch](https://www.twitch.tv/endereyes202), [Twitter](https://twitter.com/endereyes202)): made the twitter and reddit logos, clipboard, picture colored version.
 
+- ⭐ [kaissouDev](https://github.com/kaissouDev) for contributing.
+
 - SVG to data URI function in build.js is extracted from the repository:
 [svg-to-data-uri](https://github.com/heyallan/svg-to-data-uri) by heyallan under the [MIT License](https://github.com/heyallan/svg-to-data-uri/blob/master/LICENSE).
 
