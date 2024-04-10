@@ -121,7 +121,7 @@ Or insert plain SVG code into your HTML.
 
 - SVGO and [SVGOMG](https://svgomg.net/) to optimize .SVG's.
 
-- ⭐ endereyes202#5828 ([YouTube](https://www.youtube.com/@endereyes202), [Twitch](https://www.twitch.tv/endereyes202), [Twitter](https://twitter.com/endereyes202)): made the twitter and reddit logos, clipboard, picture colored version.
+- ⭐ endereyes202#5828 ([YouTube](https://www.youtube.com/@endereyes202), [Twitch](https://www.twitch.tv/endereyes202), [Twitter](https://twitter.com/endereyes202)): made the twitter, youtube and reddit logos, clipboard, picture colored version.
 
 - ⭐ [kaissouDev](https://github.com/kaissouDev) for contributing.
 
